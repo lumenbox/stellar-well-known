@@ -1,12 +1,11 @@
 lumenbox/stellar-well-known a minimal HTTP server to host http://<domain>/.well-known/stellar.toml
 =======================================================
-This image is using the [goStatic](https://github.com/PierreZ/goStatic) HTTP server to host only one file: ```/.well-known/stellar.toml```
-The image is using [confd](https://github.com/kelseyhightower/confd) to fetch configuration from environment variables.
+This image is using the [goStatic](https://github.com/PierreZ/goStatic) HTTP server to host only one file: ```/.well-known/stellar.toml```. The image is using [confd](https://github.com/kelseyhightower/confd) to fetch configuration from environment variables.
 
 Features:
-* enables CORS by default. CORS is mandatory for the [stellar.toml file](https://www.stellar.org/developers/guides/concepts/stellar-toml.html#enabling-cross-origin-resource-sharing-cors
+* enables CORS by default. CORS is mandatory for the [stellar.toml file](https://www.stellar.org/developers/guides/concepts/stellar-toml.html#enabling-cross-origin-resource-sharing-cors)
 * everything can be configured through environment variables so no need for volume or host mount
-* thanks to goStatic
+* thanks to goStatic the container contains really minimalistic web server which makes it more secure
 * based on the alpine image so pretty small footprint
 
 Please note that as Stellar requires HTTPS to fetch the stellar.toml file this container must be behind a HTTPS reverse proxy (checkout [trafik](https://traefik.io/) with built-in docker and Let's encrypt support)
