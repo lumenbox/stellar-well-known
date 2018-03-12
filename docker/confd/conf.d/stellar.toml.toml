@@ -1,0 +1,7 @@
+[template]
+src = "stellar.toml.tmpl"
+dest = "/srv/http/.well-known/stellar.toml"
+prefix = "/stellarwellknown/stellar"
+keys = [
+    "/toml",
+]
