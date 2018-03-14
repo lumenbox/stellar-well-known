@@ -1,4 +1,4 @@
-lumenbox/stellar-well-known a minimal HTTP server to host http://<domain>/.well-known/stellar.toml
+lumenbox/stellar-well-known a simple HTTP service to host http://\<domain\>/.well-known/stellar.toml
 =======================================================
 This image is using the [goStatic](https://github.com/PierreZ/goStatic) HTTP server to host only one file: ```/.well-known/stellar.toml```. The image is using [confd](https://github.com/kelseyhightower/confd) to fetch configuration from environment variables.
 
@@ -23,12 +23,12 @@ No default
 
 The value of this environment variable will be included into the /.well-known/stellar.toml file for the FEDERATION_SERVER key.
 
-Example: STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://<yourdomain>/federation/
+Example: STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://\<yourdomain\>/federation
 
 ### How to use it
 You can run with plain docker:
 ```
-docker run -e STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://<yourdomain>/federation/ lumenbox/stellar-well-known:latest
+docker run -e STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://\<yourdomain\>/federation lumenbox/stellar-well-known:latest
 ```
 
 Or use docker-compose etc.
