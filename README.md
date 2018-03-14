@@ -12,6 +12,9 @@ Please note that as Stellar requires HTTPS to fetch the stellar.toml file this c
 
 ToDo: Currently only the FEDERATION_SERVER entry is supported. Support more key/value pairs in the stellar.toml file
 
+## Docker
+You can build your own Docker image (Dockerfile is in the repo) or use our image form dockerhub: lumenbox/stellar-well-known:latest
+
 ## Supported environment variables
 ### STELLARWELLKNOWN_CONFIG_PORT (Mandatory)
 Default: 8043 (same as default port of goStatic)
@@ -28,7 +31,7 @@ Example: STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://\<yourdomain\>/
 ### How to use it
 You can run with plain docker:
 ```
-docker run -e STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://\<yourdomain\>/federation lumenbox/stellar-well-known:latest
+docker run -e STELLARWELLKNOWN_STELLAR_TOML_FEDERATION_SERVER=https://<yourdomain>/federation lumenbox/stellar-well-known:latest
 ```
 
 Or use docker-compose etc.
